@@ -477,7 +477,7 @@ function! s:on_leave()
 endfunction
 
 function! hdevtools#build_command(command, args)
-  let l:cmd = 'hdevtools'
+  let l:cmd = 'stack exec --no-ghc-package-path hdevtools --'
   let l:cmd = l:cmd . ' ' . a:command . ' '
 
   let l:cmd = l:cmd . get(g:, 'hdevtools_options', '') . ' '
