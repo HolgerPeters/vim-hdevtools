@@ -487,7 +487,7 @@ endfunction
 
 " Does not include g:hdevtools_options
 function! hdevtools#build_command_bare(command, args)
-  let l:cmd = 'hdevtools'
+  let l:cmd = 'stack exec --no-ghc-package-path hdevtools --'
   let l:cmd = l:cmd . ' ' . a:command . ' '
   let l:cmd = l:cmd . a:args
   return l:cmd
